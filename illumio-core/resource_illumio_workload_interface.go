@@ -93,6 +93,9 @@ func resourceIllumioWorkloadInterface() *schema.Resource {
 				ValidateDiagFunc: checkStringZerotoTwoHundredAndFiftyFive,
 			},
 		},
+		Importer: &schema.ResourceImporter{
+			StateContext: schema.ImportStatePassthroughContext,
+		},
 	}
 }
 
